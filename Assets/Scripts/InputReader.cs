@@ -3,15 +3,15 @@ using UnityEngine;
 
 public class InputReader : MonoBehaviour
 {
-    private KeyCode _clikedOnCube = KeyCode.Mouse2;
+    private KeyCode _clikedOnButton = KeyCode.Mouse2;
 
-    public event Action<Vector3> Clicking;
+    public event Action<Vector3> Clicked;
 
     private void Update()
     {
-        if (Input.GetKeyDown(_clikedOnCube))
+        if (Input.GetKeyDown(_clikedOnButton))
         {
-            Clicking?.Invoke(Input.mousePosition);
+            Clicked?.Invoke(Input.mousePosition);
         }
     }
 }

@@ -14,11 +14,4 @@ public class Cube : MonoBehaviour
     {
         transform.localScale = vector3;
     }
-
-    public void Destroy()
-    {
-        Destroy(gameObject);
-
-        detonator.Work();
-    }
 }

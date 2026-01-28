@@ -3,19 +3,19 @@ using UnityEngine;
 public class Detonator : MonoBehaviour
 {
     private float _radius;
-    private int _maxRadius = 300;
+    private int _maxRadius = 500;
     private float _power;
-    private int _powerCoefficient = 5;
+    private int _powerCoefficient = 10;
 
-    public void Work()
+    public void Work(Cube cube)
     {
-        if (gameObject.TryGetComponent(out RadiusReader radiusReader))
+        if (cube.gameObject.TryGetComponent(out RadiusReader radiusReader))
         {
             _radius = _maxRadius / radiusReader.Radius;
             _power = _radius * _powerCoefficient;
         }
 
-        Vector3 explosionPos = transform.position;
+        Vector3 explosionPos = cube.transform.position;
 
         Collider[] colliders = Physics.OverlapSphere(explosionPos, _radius);
 

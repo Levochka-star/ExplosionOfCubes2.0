@@ -10,12 +10,12 @@ public class Raycast : MonoBehaviour
 
     private void OnEnable()
     {
-        _inputUser.Clicking += Work;
+        _inputUser.Clicked += Work;
     }
 
     private void OnDisable()
     {
-        _inputUser.Clicking -= Work;
+        _inputUser.Clicked -= Work;
     }
     private void Work(Vector3 vector3)
     {
