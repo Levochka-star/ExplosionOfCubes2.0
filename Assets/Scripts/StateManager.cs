@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BasedClass : MonoBehaviour
+public class StateManager : MonoBehaviour
 {
     [SerializeField] private Raycast _raycast;
 
