@@ -15,13 +15,13 @@ public class CubeSpawner : MonoBehaviour
         }
     }
 
-    private void Spawn(Cube cube, float SpawnChance)
+    private void Spawn(Cube cube, float spawnChance)
     {
         SpawnChance *= _multipleSpawnShance;
 
         Cube clone = Instantiate(_prefabCube, cube.transform.position, cube.transform.rotation);
 
-        clone.SetSpawnChance(SpawnChance);
+        clone.SetSpawnChance(spawnChance);
 
         clone.SetScale(cube.transform.localScale * _multipleLocalScale);
     }
