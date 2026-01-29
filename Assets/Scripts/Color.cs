@@ -2,7 +2,7 @@ using UnityEngine;
 
 [RequireComponent(typeof (Renderer))]
 
-public class Colorize: MonoBehaviour
+public class Color: MonoBehaviour
 {
     private Renderer _renderer;
     

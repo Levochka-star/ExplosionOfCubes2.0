@@ -17,7 +17,7 @@ public class CubeSpawner : MonoBehaviour
 
     private void Spawn(Cube cube, float spawnChance)
     {
-        SpawnChance *= _multipleSpawnShance;
+        spawnChance *= _multipleSpawnShance;
 
         Cube clone = Instantiate(_prefabCube, cube.transform.position, cube.transform.rotation);
 

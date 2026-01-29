@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class StateManager : MonoBehaviour
+public class CubePlacementController : MonoBehaviour
 {
     [SerializeField] private Raycast _raycast;
 
